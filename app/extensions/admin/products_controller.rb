@@ -6,9 +6,6 @@ module Spree
           extend ActiveSupport::Concern
 
           included do
-            def reorder
-              @products = Spree::Product.active.find(:all, :order => 'position')
-            end
 
             def update_positions
               params[:positions].each do |id, index|
