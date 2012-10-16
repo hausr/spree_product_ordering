@@ -13,6 +13,6 @@ Deface::Override.new(
 Deface::Override.new(
   :virtual_path  => "spree/admin/products/index",
   :insert_top => '[data-hook="admin_products_index_rows"]',
-  :text          => '<td><span style="color:#b8b8b8;"><%= product.position %></span><span class="handle"></span></td>',
+  :text          => '<td><span style="color:#b8b8b8;"><%= product.position unless product.position.blank? %></span><span class="handle"></span></td>',
   :name => "Position td"
 )
